@@ -9,6 +9,7 @@ public class Computer {
     boolean computerIsWorking;
     Random random = new Random();
     Scanner scanner = new Scanner(System.in);
+
     public Computer(String processor, int ram, int hardDisk, int cyclesOfWork, boolean computerIsWorking) {
         this.processor = processor;
         this.ram = ram;
@@ -25,10 +26,10 @@ public class Computer {
     }
 
     public void turnOn() {
-            int a = random.nextInt(2);
-            System.out.println("Чтобы включить компьютер, введите число 0 или 1");
-            int b = scanner.nextInt();
-            if(computerIsWorking){
+        int a = random.nextInt(2);
+        System.out.println("Чтобы включить компьютер, введите число 0 или 1");
+        int b = scanner.nextInt();
+        if (computerIsWorking) {
             if (a == b) {
                 System.out.println("Идет включение компьютера...");
             } else if (b != 0 && b != 1) {
@@ -38,27 +39,26 @@ public class Computer {
                 System.out.println("К сожалению, Ваш компьютер сгорел");
                 computerIsWorking = false;
             }
-        }
-        else{
+        } else {
             System.out.println("Невозможно включить компьютер, он сгорел");
         }
 
     }
 
-        public void turnOff() {
-            if (computerIsWorking) {
-                int a = random.nextInt(2);
-                System.out.println("Чтобы выключить компьютер, введите число 0 или 1");
-                int b = scanner.nextInt();
-                if (a == b) {
-                    System.out.println("Идет выключение компьютера...");
-                } else if (b != 0 && b != 1) {
-                    System.out.println("Вы выбрали несуществующую опцию");
-                    computerIsWorking = false;
-                } else {
-                    System.out.println("К сожалению, Ваш компьютер сгорел");
-                    computerIsWorking = false;
-                }
+    public void turnOff() {
+        if (computerIsWorking) {
+            int a = random.nextInt(2);
+            System.out.println("Чтобы выключить компьютер, введите число 0 или 1");
+            int b = scanner.nextInt();
+            if (a == b) {
+                System.out.println("Идет выключение компьютера...");
+            } else if (b != 0 && b != 1) {
+                System.out.println("Вы выбрали несуществующую опцию");
+                computerIsWorking = false;
+            } else {
+                System.out.println("К сожалению, Ваш компьютер сгорел");
+                computerIsWorking = false;
             }
         }
     }
+}
