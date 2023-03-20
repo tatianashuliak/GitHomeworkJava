@@ -2,13 +2,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Computer {
-    String processor;
-    int ram;
-    int hardDisk;
-    int cyclesOfWork;
-    boolean computerIsWorking;
-    Random random = new Random();
-    Scanner scanner = new Scanner(System.in);
+    private String processor;
+   private int ram;
+    private int hardDisk;
+    protected int cyclesOfWork;
+    protected boolean computerIsWorking;
+    private Random random = new Random();
+    private Scanner scanner = new Scanner(System.in);
 
     public Computer(String processor, int ram, int hardDisk, int cyclesOfWork, boolean computerIsWorking) {
         this.processor = processor;

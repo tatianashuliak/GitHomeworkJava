@@ -1,6 +1,6 @@
 public class Calculator {
-    double firstVariable;
-    double secondVariable;
+    private double firstVariable;
+    private double secondVariable;
 
     public Calculator(double firstVariable, double secondVariable) {
         this.firstVariable = firstVariable;
